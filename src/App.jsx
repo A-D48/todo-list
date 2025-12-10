@@ -1,9 +1,12 @@
 import "./App.css";
+import { useState } from "react";
 
 import TodoList from "./TodoList";
 import TodoForm from "./TodoForm";
 
 function App() {
+  const [newTodo, setNewTodo] = useState("New todo");
+
   const todos = [
     { id: 1, title: "Reveiw resources" },
     { id: 2, title: "take notes" },
@@ -13,6 +16,8 @@ function App() {
     <div>
       <h1>My Todos</h1>
       <TodoForm />
+
+      <p>{newTodo}</p>
 
       <TodoList />
       <ul>
